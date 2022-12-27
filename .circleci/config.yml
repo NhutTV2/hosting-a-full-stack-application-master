@@ -61,18 +61,18 @@ jobs:
           command: |
             npm run deploy
 
-# workflows:
-#   udagram:
-#     jobs:
-# - build
-# - hold:
-#     filters:
-#       branches:
-#         only:
-#           - master
-#     type: approval
-#     requires:
-#       - build
-# - deploy
-# requires:
-#   - hold
+workflows:
+  udagram:
+    jobs:
+      - build
+      - hold:
+          filters:
+            branches:
+              only:
+                - feature/update-source
+          type: approval
+          requires:
+            - build
+      - deploy:
+        requires:
+          - hold
