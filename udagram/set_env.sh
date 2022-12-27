@@ -9,3 +9,6 @@ export AWS_REGION=us-east-1
 export AWS_PROFILE=default
 export JWT_SECRET=mysecretstring
 export URL=http://localhost:8100
+export AWS_ACCESS_KEY_ID=AKIATOB47W4DSAV3RMXJ
+export AWS_SECRET_ACCESS_KEY=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
+export PORT=5432
